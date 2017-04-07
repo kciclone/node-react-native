@@ -1,0 +1,14 @@
+version : '2'
+services:
+  mysql:
+    image: mysql/mysql-server:5.7
+    container_name: "blacklist-mysql-server"
+    volumes:
+          - "~/Workspace/db/blacklist:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: Bl@ck1istSQLRoot
+      MYSQL_DATABASE: blacklist-db
+      MYSQL_USER: blacklist-user
+      MYSQL_PASSWORD: b14ckList#P@ssw0rd!
+    ports:
+      - 3306:3306
